@@ -53,6 +53,8 @@
 
 \DeclareCaptionType{Codigo}[Código][Lista de Códigos]
 
+\usepackage{ragged2e} % para fazer texto justificado
+
 
 
 \newcommand{\source}[1]{\caption*{\normalfont Fonte: {#1}}}
@@ -210,8 +212,8 @@
 
 
 %\imprimiraprovacao
-\includepdf[pages=-]{pdf/tcc-aprovado.pdf}
-
+%\includepdf[pages=-]{pdf/tcc-aprovado.pdf}
+\include{tex/pagina-aprovacao.tex}
 %\cleardoublepage
 
 %---------------------------------------------------------------------%
