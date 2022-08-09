@@ -2,25 +2,25 @@
 \ProcessOptions
 
 \documentclass[
-	% -- opções da classe memoir --
-	12pt,				% tamanho da fonte
-	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	oneside,			% para impressão em verso e anverso. Oposto a oneside
-	a4paper,			% tamanho do papel. 
-	% -- opções da classe abntex2 --
-	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
-	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
-	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
-	% -- opções do pacote babel --
-	english,			% idioma adicional para hifenização
-	french,				% idioma adicional para hifenização
-	spanish,			% idioma adicional para hifenização
-	brazil				% o último idioma é o principal do documento
-	]{abntex2}
+  % -- opções da classe memoir --
+  12pt,				% tamanho da fonte
+  openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+  oneside,			% para impressão em verso e anverso. Oposto a oneside
+  a4paper,			% tamanho do papel.
+  % -- opções da classe abntex2 --
+  %chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+  %section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+  %subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+  %subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+  % -- opções do pacote babel --
+  english,			% idioma adicional para hifenização
+  french,				% idioma adicional para hifenização
+  spanish,			% idioma adicional para hifenização
+  brazil				% o último idioma é o principal do documento
+  ]{abntex2}
 
 \usepackage{setspace}
-\usepackage{conf-ifsc}	
+\usepackage{conf-ifsc}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -72,21 +72,21 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
 
@@ -140,11 +140,36 @@
 
 \tipotrabalho{Monografia (Graduação)}
 
-% O preambulo deve conter o tipo do trabalho, o objetivo, o nome da instituição e a área de concentração 
+% O preambulo deve conter o tipo do trabalho, o objetivo, o nome da instituição e a área de concentração
 \preambulo{Trabalho de Conclusão de Curso /  Monografia / Dissertação submetido ao Instituto Federal de Educação, Ciência e Tecnologia de Santa Catarina como parte dos requisitos para obtenção do título de Engenheiro/Tecnólogo/Especialista/Mestre em xxx.}
 
 % \textoaprovacao{Este Trabalho foi julgado adequado para obtenção do Título de Engenheira Eletrônica em abril de 2021 e aprovado na sua forma final pela banca examinadora do Curso de Engenharia Eletrônica do instituto Federal de Educação Ciência, e Tecnologia de Santa Catarina.}
 
+% ----------------------------------------------------------
+% Configurações de aparência do PDF final
+% ----------------------------------------------------------
+\definecolor{blue}{RGB}{41,5,195}   % alterando o aspecto da cor azul
+
+% ----------------------------------------------------------------------------------------
+% Setup da metadata do PDF
+% ----------------------------------------------------------------------------------------
+
+\makeatletter
+
+\hypersetup{                        % informações do PDF
+  %	pagebackref=true,
+  pdftitle={\@title},
+  pdfauthor={\@author},
+  pdfsubject={\imprimirpreambulo},
+  pdfkeywords={Tag1}; {Tag2}; {Tag3}; {Tag4}; {Tag4},
+  colorlinks=true,            % false: boxed links; true: colored links
+  linkcolor=black,            % color of internal links
+  citecolor=black,                % color of links to bibliography
+  filecolor=black,            % color of file links
+  urlcolor=darkgray,
+  bookmarksdepth=4
+}
+\makeatother
 
 
 %---------------------------------------------------------------------%
@@ -156,7 +181,7 @@
 
 
 \selectlanguage{brazil}
-\frenchspacing 
+\frenchspacing
 
 
 % ----------------------------------------------------------
@@ -169,7 +194,7 @@
 
 %---------------------------------------------------------------------%
 % ATENÇÃO - Pergunte para a Biblioteca do IFSC
-% Inserir a ficha bibliografica - 
+% Inserir a ficha bibliografica -
 %
 % Para gerar a ficha catalográfica acesse:
 % http://ficha.florianopolis.ifsc.edu.br/
@@ -194,11 +219,11 @@
 %---------------------------------------------------------------------%
 \begin{dedicatoria}
     \vspace*{\fill}
-	\begin{flushright}
-    		(Dedicatória é um elemento opcional.\\ 
+  \begin{flushright}
+        (Dedicatória é um elemento opcional.\\
             Texto alinhado no canto inferior direito.\\
             Não deve ultrapassar uma página.)
-	\end{flushright}
+  \end{flushright}
 \end{dedicatoria}
 
 
@@ -217,11 +242,11 @@
 %---------------------------------------------------------------------%
 \begin{epigrafe}
     \vspace*{\fill}
-	\begin{flushright}
-    		(Epígrafe é um elemento opcional.\\
-    		Texto alinhado no canto inferior direito.\\
+  \begin{flushright}
+        (Epígrafe é um elemento opcional.\\
+        Texto alinhado no canto inferior direito.\\
             Não deve ultrapassar uma página.)
-	\end{flushright}
+  \end{flushright}
 \end{epigrafe}
 
 %---------------------------------------------------------------------%
@@ -229,27 +254,27 @@
 %---------------------------------------------------------------------%
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
-\renewcommand{\baselinestretch}{1} 
+\renewcommand{\baselinestretch}{1}
 \begin{resumo}
     O resumo deve mostrar a natureza e o objetivo do trabalho, o método que foi empregado, os resultados e as conclusões. O resumo deve conter entre 150 e 500 palavras e constitui-se de um único parágrafo, sem recuo.
 
- 
-   \noindent 
-    \textbf{Palavras-chave}: Primeira palavra-chave. Segunda palavra-chave. Terceira palavra-chave. Quarta palavra-chave (opcional). Quinta palavra-chave (opcional). 
+
+   \noindent
+    \textbf{Palavras-chave}: Primeira palavra-chave. Segunda palavra-chave. Terceira palavra-chave. Quarta palavra-chave (opcional). Quinta palavra-chave (opcional).
 \end{resumo}
 
 % resumo em inglês
-\renewcommand{\baselinestretch}{1} 
+\renewcommand{\baselinestretch}{1}
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
 
-   The abstract should show the nature and scope of work, the method that was used, the results and conclusions. The abstract may contain between 150 and 500 words, and it must be only one paragraph. 
+   The abstract should show the nature and scope of work, the method that was used, the results and conclusions. The abstract may contain between 150 and 500 words, and it must be only one paragraph.
 
 
    %\vspace{-0.8cm}
- 
-   \noindent 
-   \textbf{Keywords}: First keyword. Second keyword. Third keyword. Fourth keyword (optional). Fifth keyword (optional).  
+
+   \noindent
+   \textbf{Keywords}: First keyword. Second keyword. Third keyword. Fourth keyword (optional). Fifth keyword (optional).
  \end{otherlanguage*}
 \end{resumo}
 
@@ -274,7 +299,7 @@
 \renewcommand{\cftquadroname}{\quadroname\space}
 \renewcommand*{\cftquadroaftersnum}{\hfill\textendash\hfill}
 \counterwithout{quadro}{chapter}
-\listofquadros* 
+\listofquadros*
 \cleardoublepage
 
 
@@ -301,7 +326,7 @@
 \renewcommand*{\cftCodigoaftersnum}{\hfill\textendash\hfill}
 \counterwithout{Codigo}{chapter}
 \newfloat{Codigo}{\Codigoname}{loc}[chapter]
-\listofCodigos* 
+\listofCodigos*
 \cleardoublepage
 
 
@@ -373,7 +398,7 @@
 % ----------------------------------------------------------
 % Apêndices
 % ----------------------------------------------------------
- \begin{apendicesenv}         
+ \begin{apendicesenv}
      \partapendices
      \include{tex/Apendices}
  \end{apendicesenv}
