@@ -1,0 +1,14 @@
+* Template de artigo de TCC do epartamento de Metal Mecânica do Instituto Federal de Santa Catarina, Câmpus Florianópolis
+
+** Guia de uso
+ Consultar [[./Leia-me.pdf]]
+
+* Pendências
+** TODO Documentar uso página de aprovação elaborada em tex
+:PROPERTIES:
+:CREATED:  <2022-08-09 Tue 21:00>
+:END:
+** TODO Implementar comando para configurar nome do departamento
+:PROPERTIES:
+:CREATED:  <2022-08-09 Tue 21:00>
+:END:
