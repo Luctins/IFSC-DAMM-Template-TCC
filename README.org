@@ -1,4 +1,4 @@
-* Template de artigo de TCC do epartamento de Metal Mecânica do Instituto Federal de Santa Catarina, Câmpus Florianópolis
+* Template de artigo de TCC do departamento de Metal Mecânica do Instituto Federal de Santa Catarina, Câmpus Florianópolis
 
 ** Guia de uso
  Consultar [[./Leia-me.pdf]]
